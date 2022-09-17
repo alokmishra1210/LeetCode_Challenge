@@ -12,7 +12,7 @@ class Solution:
                 second=second.next
                 first.next=second
             else:
-                first=second
+                first=first.next
                 second=second.next
         return head
                 
