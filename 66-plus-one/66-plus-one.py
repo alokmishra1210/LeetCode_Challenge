@@ -7,13 +7,13 @@ class Solution:
         tmp=temp_n%10
         digits[mx_len]=tmp
         mx_len=mx_len-1
-        if carry==1 and mx_len>=0:
-            while carry!=0 and mx_len>=0:
-                temp_n=int(digits[mx_len])+carry
-                carry=temp_n//10
-                tmp=temp_n%10
-                digits[mx_len]=tmp
-                mx_len=mx_len-1
+    
+        while carry!=0 and mx_len>=0:
+            temp_n=int(digits[mx_len])+carry
+            carry=temp_n//10
+            tmp=temp_n%10
+            digits[mx_len]=tmp
+            mx_len=mx_len-1
         if carry==1:
             digits.insert(0,carry)
         
