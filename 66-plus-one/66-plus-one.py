@@ -6,17 +6,17 @@ class Solution:
         carry=temp_n//10
         tmp=temp_n%10
         digits[mx_len]=tmp
-        mx_len=mx_len-1
-    
+        mx_len=mx_len-1    
         while carry!=0 and mx_len>=0:
             temp_n=int(digits[mx_len])+carry
             carry=temp_n//10
             tmp=temp_n%10
             digits[mx_len]=tmp
             mx_len=mx_len-1
+            if carry==0:
+                break
         if carry==1:
-            digits.insert(0,carry)
-        
+            digits.insert(0,carry)        
         return digits
                 
     
