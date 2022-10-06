@@ -13,8 +13,6 @@ class Solution:
             tmp=temp_n%10
             digits[mx_len]=tmp
             mx_len=mx_len-1
-            if carry==0:
-                break
         if carry==1:
             digits.insert(0,carry)        
         return digits
